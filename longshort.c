@@ -32,20 +32,20 @@ int main ()
     }
     while (fgets(ln, 255, filer) != NULL)
     {
-    {
-        length = strlen(ln);
-        trim(ln, length);
-        length = strlen(ln);
-        printlns(ln, namew1, namew2, length);
-        if (length < 20)
         {
-            count1++;
+            length = strlen(ln);
+            trim(ln, length);
+            length = strlen(ln);
+            printlns(ln, namew1, namew2, length);
+            if (length < 20)
+            {
+                count1++;
+            }
+            else
+            {
+                count2++;
+            }
         }
-        else
-        {
-            count2++;
-        }
-    }
     }
     fclose(filer);
     printf("Printed %d lines to %s.\n", count1, namew1);
@@ -85,7 +85,7 @@ void printlns(char *str, char *w1, char *w2, int size)
         int ch = str[i];
         if ( (ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122))
         {
-        ch = toupper(ch);
+            ch = toupper(ch);
         }
         str[i] = ch;
     }
@@ -105,7 +105,7 @@ void printlns(char *str, char *w1, char *w2, int size)
          int ch = str[i];
         if ( (ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122))
         {
-        ch = tolower(ch);
+            ch = tolower(ch);
         }
         str[i] = ch;
     }
