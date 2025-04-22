@@ -24,7 +24,6 @@ int main ()
     input("First file to write to: ", namew1);
     input("Second file to write to: ", namew2);
 
-    //while ()
     FILE *filer = fopen(namer, "r");
 
     if (filer == NULL)
